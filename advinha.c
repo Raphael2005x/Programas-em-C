@@ -14,6 +14,7 @@ int main()
     int acertou = 0;
     int tentativa = 1;
     int chute;
+    int mala;
 
     while (acertou == 0)
     {
