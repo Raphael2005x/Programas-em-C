@@ -11,12 +11,10 @@ int main()
     srand(time(NULL));
 
     int numero_secreto = rand() % 5;
-    int acertou = 0;
     int tentativa = 1;
     int chute;
-    int mala;
 
-    while (acertou == 0)
+    while (1)
     {
         printf("%dº Tentativa\n", tentativa);
         printf("Qual seu chute? ");
@@ -33,7 +31,6 @@ int main()
         {
             printf("Parabéns você acertou o número Secreto!\n");
             printf("Você acertou na %dº tentativa, O número secreto era o (%d)\n", tentativa, numero_secreto);
-
             break;
         }
         else if (chute < numero_secreto)
@@ -43,8 +40,7 @@ int main()
         else
         {
             printf("Seu chute foi maior que o número secreto\n");
-
         }
-        tentativa = tentativa + 1;
+        tentativa++;
     }
 }

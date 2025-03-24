@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "advinha": "cpp"
+        "advinha": "cpp",
+        "time.h": "c"
     }
 }
