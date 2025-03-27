@@ -15,6 +15,7 @@ int main()
     int chute = 0;
     int tentativa = 1;
     int acertou = 0;
+    double pontos = 1000;
 
     while (acertou == 0)
     {
@@ -33,7 +34,7 @@ int main()
         if (chute == numero_secreto)
         {
             printf("Parabéns! Você acertou o número secreto %d!\n", numero_secreto);
-            printf("Você acertou em %d tentativas", tentativa);
+            printf("Você acertou em %d tentativas\n", tentativa);
             acertou = 1; // se a pessoa acerta o numero ele nao vai rodar o (if !acertou)
             break;       // se a pessoa acertar ele encerra o programa
         }
@@ -45,8 +46,12 @@ int main()
         {
             printf("O número secreto é menor que %d\n", chute);
         }
-        tentativa = tentativa + 1;
+        tentativa++;
+        double pontosperdidos = (chute - numero_secreto) / 2.0;
+        pontos = pontos - pontosperdidos;
     }
+    printf("Fim de jogo!");
+    printf("Quantidade de pontos: %.2f", pontos);
     // if (!acertou)
     // { // o (!) indica a negativa.
     //     printf("Que pena! Você não conseguiu adivinhar. O número secreto era %d.\n", numero_secreto);
