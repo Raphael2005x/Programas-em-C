@@ -10,10 +10,10 @@ int main()
 
     srand(time(NULL));
 
-    int numero_secreto = rand() % 50;
+    int numero_secreto = rand() % 10;
     int tentativa = 1;
     int chute;
-    int pontos = 1000;
+    double pontos = 1000;
 
     while (1)
     {
@@ -43,9 +43,9 @@ int main()
             printf("Seu chute foi maior que o número secreto\n");
         }
         tentativa++;
-        int pontosperdidos = (chute - numero_secreto) / 2;
+        double pontosperdidos = (chute - numero_secreto) / 2.0;
         pontos = pontos - pontosperdidos;
     }
     printf("Fim de jogo!");
-    printf("Quantidade de pontos: %d", pontos);
+    printf("Quantidade de pontos: %.2f", pontos);
 }
