@@ -4,13 +4,17 @@
 
 int main()
 {
-    printf("+++++++++++++++++++++++++++++++++++++\n");
-    printf("+ Bem vindo ao programa de adivinhar +\n");
-    printf("+++++++++++++++++++++++++++++++++++++\n");
+    printf("\n\n");
+    printf("     ───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───\n");
+    printf("     ───█▒▒░░░░░░░░░▒▒█───\n");
+    printf("     ────█░░█░░░░░█░░█──── Jogo de Adivinhação\n");
+    printf("     ─▄▄──█░░░▀█▀░░░█──▄▄─ Teste sua Intuição\n");
+    printf("     █░░█─▀▄░░░░░░░▄▀─█░░█\n\n");
 
     srand(time(0));
 
     int numero_secreto = rand() % 40;
+
     int tentativa = 1;
     int chute;
     double pontos = 1000;
@@ -34,8 +38,9 @@ int main()
         numerotentativas = 6;
         break;
 
-    default: printf("Numero invalido!");
-    return nivel;
+    default:
+        printf("Numero invalido!");
+        return nivel;
     }
 
     for (int i = 1; i <= numerotentativas; i++)
@@ -55,6 +60,18 @@ int main()
         if (chute == numero_secreto)
         {
             printf("Parabéns você acertou o número Secreto!\n");
+
+            printf("         .-/`)\n");
+            printf("       // / / )\n");
+            printf("    .=// / / / )\n");
+            printf("   //`/ / / / /\n");
+            printf("  // /     ` /  Parabéns, Você acertou!!\n");
+            printf(" ||         /\n");
+            printf("  \\\\       /\n");
+            printf("   ))    .'\n");
+            printf("  //    /\n");
+            printf(" /\n");
+
             printf("Você acertou na %dº tentativa, O número secreto era o (%d)\n", tentativa, numero_secreto);
             acertou = 1;
             break;
@@ -71,8 +88,26 @@ int main()
         double pontosperdidos = (abs(chute - numero_secreto)) / (double)2;
         pontos = pontos - pontosperdidos;
     }
-    if(!acertou){
-        printf("Fim de jogo, Você perdeu!\n");
+    if (!acertou)
+    {
+
+        printf("    |/|\n");
+        printf("    | |\n");
+        printf("    |/|\n");
+        printf("    | |\n");
+        printf("    |/|\n");
+        printf("   (___)\n");
+        printf("   (___)\n");
+        printf("   (___)\n");
+        printf("   (___)\n");
+        printf("   (___)\n");
+        printf("   // \\\\\n");
+        printf("  //   \\\\\n");
+        printf(" ||     ||\n");
+        printf(" ||     ||\n");
+        printf(" ||     ||\n");
+        printf("  \\\\___//\n");
+        printf(" Você Perdeu\n\n");
     }
     printf("Quantidade de pontos: %.2f", pontos);
     return 0;
