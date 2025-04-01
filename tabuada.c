@@ -6,9 +6,9 @@ int main()
     int tabuada = 0;
     scanf("%d", &tabuada);
 
-
-    for(multiplicado = 0; multiplicado <= 10; multiplicado++){
-        printf("%d x ",tabuada);
+    for (multiplicado = 0; multiplicado <= 10; multiplicado++)
+    {
+        printf("%d x ", tabuada);
         printf("%d = ", multiplicado);
         printf("%d \n", tabuada * multiplicado);
     }
