@@ -8,9 +8,9 @@ int main()
     printf("+ Bem vindo ao programa de adivinhar +\n");
     printf("+++++++++++++++++++++++++++++++++++++\n");
 
-    srand(time(NULL));
+    srand(time(0));
 
-    int numero_secreto = rand() % 10;
+    int numero_secreto = rand() % 40;
     int tentativa = 1;
     int chute;
     double pontos = 1000;
@@ -43,9 +43,10 @@ int main()
             printf("Seu chute foi maior que o número secreto\n");
         }
         tentativa++;
-        double pontosperdidos = (chute - numero_secreto) / 2.0;
+        double pontosperdidos = (abs(chute - numero_secreto)) / (double)2;
         pontos = pontos - pontosperdidos;
     }
     printf("Fim de jogo!");
     printf("Quantidade de pontos: %.2f", pontos);
+    return 0;
 }

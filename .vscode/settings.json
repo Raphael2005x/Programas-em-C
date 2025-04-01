@@ -2,5 +2,6 @@
     "files.associations": {
         "advinha": "cpp",
         "time.h": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

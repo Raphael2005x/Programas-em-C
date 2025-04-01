@@ -48,7 +48,7 @@ int main()
         }
         tentativa++;
         double pontosperdidos = (chute - numero_secreto) / 2.0;
-        pontos = pontos - pontosperdidos;
+        pontos = (pontos - pontosperdidos);
     }
     printf("Fim de jogo!");
     printf("Quantidade de pontos: %.2f", pontos);
