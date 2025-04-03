@@ -1,1 +1,1 @@
-Estudos C & C++.
+Todos os aquivos desta pasta é utilizado apenas para o estudo de programação na linguagem C&C++.
